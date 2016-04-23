@@ -10,14 +10,252 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12529,        389]
-NotebookOptionsPosition[     11626,        358]
-NotebookOutlinePosition[     11973,        373]
-CellTagsIndexPosition[     11930,        370]
+NotebookDataLength[     21095,        634]
+NotebookOptionsPosition[     19947,        596]
+NotebookOutlinePosition[     20294,        611]
+CellTagsIndexPosition[     20251,        608]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell["\<\
+Let\[CloseCurlyQuote]s calculate the optical depth for free - free absorption \
+in the remnant after a fortnight\
+\>", "Text",
+ CellChangeTimes->{{3.6703976921551714`*^9, 3.6703977833038597`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Epsilon]\[LetterSpace]\[Nu]\[LetterSpace]ff", " ", "=", " ", 
+    RowBox[{
+     SqrtBox[
+      FractionBox[
+       RowBox[{"me", " ", 
+        SuperscriptBox["c", "2"]}], 
+       RowBox[{"k", " ", "T"}]]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["r0", "3"], "n"}], ")"}], "2"], "*", 
+     FractionBox[
+      RowBox[{"me", " ", 
+       SuperscriptBox["c", "2"]}], 
+      SuperscriptBox["r0", "3"]]}]}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Bremsstrahlung", " ", "emissivity"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"I\[LetterSpace]bb", "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"k", " ", "T"}], 
+      SuperscriptBox["c", "2"]], 
+     SuperscriptBox["\[Nu]", "2"]}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Blackbody", " ", "surface", " ", "radiance"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]\[LetterSpace]\[Nu]\[LetterSpace]ff", "=", 
+   FractionBox["\[Epsilon]\[LetterSpace]\[Nu]\[LetterSpace]ff", 
+    "I\[LetterSpace]bb"]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6703977866012764`*^9, 3.670397902861377*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "\[Alpha]\[LetterSpace]\[Nu]\[LetterSpace]ff", "*", "t", "*", "ve"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"n", "\[Rule]", " ", 
+    FractionBox[
+     RowBox[{"5", " ", "Msun"}], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"t", " ", "ve"}], ")"}], "3"], "mp"}]]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"Msun", "\[Rule]", " ", 
+    RowBox[{"2", "*", 
+     SuperscriptBox["10", "30"], "kg"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"mp", "\[Rule]", " ", 
+    RowBox[{"1800", " ", "me"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"me", "\[Rule]", " ", 
+    RowBox[{"9", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "28"}]], "gram"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"\[Nu]", "\[Rule]", " ", 
+    RowBox[{"c", "/", "\[Lambda]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"n", "\[Rule]", " ", 
+    RowBox[{"1", " ", 
+     SuperscriptBox["cm", 
+      RowBox[{"-", "3"}]]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"\[Lambda]", "\[Rule]", 
+    RowBox[{"6", " ", "cm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"t", "\[Rule]", " ", 
+    RowBox[{"15", " ", "days"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"c", "\[Rule]", " ", 
+    RowBox[{"3", "*", 
+     SuperscriptBox["10", "10"], 
+     RowBox[{"cm", "/", "s"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", "/.", 
+   RowBox[{"r0", "\[Rule]", " ", 
+    RowBox[{"2.8", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "15"}]], "meter"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"k", "\[Rule]", " ", 
+    RowBox[{"1.4", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "16"}]], 
+     RowBox[{"erg", "/", "kelvin"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", "/.", " ", 
+   RowBox[{"ve", "\[Rule]", " ", 
+    RowBox[{"5000", " ", 
+     RowBox[{"km", "/", "s"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"T", "\[Rule]", " ", 
+    RowBox[{"16000", " ", "kelvin"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"days", "\[Rule]", " ", 
+    RowBox[{"24", " ", "hour"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"hour", "\[Rule]", " ", 
+    RowBox[{
+     SuperscriptBox["60", "2"], "s"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"erg", "\[Rule]", " ", 
+    RowBox[{"gram", "*", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"cm", "/", "s"}], ")"}], "2"]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"km", "\[Rule]", " ", 
+    RowBox[{"1000", " ", "meter"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"meter", "\[Rule]", " ", 
+    RowBox[{
+     SuperscriptBox["10", "2"], "cm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"kg", "\[Rule]", 
+    RowBox[{"1000", " ", "gram"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PowerExpand", "[", "%", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Simplify", "[", "%", "]"}]}], "Input",
+ CellChangeTimes->{{3.6703979119493494`*^9, 3.6703979248733406`*^9}, {
+  3.6704038860753627`*^9, 3.670403915665037*^9}, {3.6704039786564846`*^9, 
+  3.6704041645120993`*^9}, {3.6704043598020983`*^9, 3.670404390944415*^9}, {
+  3.6704045416891913`*^9, 3.6704045702034707`*^9}, {3.67040475703469*^9, 
+  3.6704047590991125`*^9}, {3.6704047906111164`*^9, 3.6704048746991873`*^9}, {
+  3.670404907382475*^9, 3.6704050384438243`*^9}, {3.670405233900015*^9, 
+  3.670405271657297*^9}, {3.6704053054448524`*^9, 3.670405363885948*^9}, {
+  3.6704054370369744`*^9, 3.670405473302666*^9}, {3.6704055081482058`*^9, 
+  3.6704055408051643`*^9}}],
+
+Cell[BoxData["5.730955512303556`*^13"], "Output",
+ CellChangeTimes->{
+  3.6704045577230644`*^9, 3.6704047603545465`*^9, {3.6704048201325226`*^9, 
+   3.6704049462932987`*^9}, {3.670405023357342*^9, 3.6704050327496877`*^9}, {
+   3.6704052402676563`*^9, 3.670405272031309*^9}, {3.6704053251066136`*^9, 
+   3.670405364329776*^9}, 3.6704054743037453`*^9, {3.6704055163691473`*^9, 
+   3.670405541248014*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  FractionBox["Mdot", 
+   RowBox[{"4", " ", "\[Pi]", " ", "v", " ", 
+    SuperscriptBox["r", "2"], " ", "mp"}]], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"Mdot", " ", "\[Rule]", " ", 
+    RowBox[{"Mdot\[LetterSpace]5", " ", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "5"}]], 
+     FractionBox["Msun", "year"]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"mp", "\[Rule]", " ", 
+    RowBox[{"1.6", "*", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "24"}]], "gram"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"r", "\[Rule]", " ", 
+    RowBox[{
+     SuperscriptBox["10", "15"], "cm", " ", "r15"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"v", "\[Rule]", " ", 
+    RowBox[{"v1", " ", "*", "10", " ", 
+     RowBox[{"km", "/", "s"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"Msun", "\[Rule]", " ", 
+    RowBox[{"2", "*", 
+     SuperscriptBox["10", "30"], "kg"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"year", "\[Rule]", 
+    RowBox[{"365", " ", "day"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"day", "\[Rule]", " ", 
+    RowBox[{"24", " ", "hour"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"hour", "\[Rule]", 
+    RowBox[{
+     SuperscriptBox["60", "2"], "s"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"km", "\[Rule]", " ", 
+    RowBox[{"1000", "meter"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"meter", "\[Rule]", 
+    RowBox[{"100", " ", "cm"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"kg", "\[Rule]", 
+    RowBox[{"1000", " ", "gram"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eqn\[LetterSpace]1", "=", 
+   RowBox[{"n\[LetterSpace]H", "\[Equal]", "%"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6704060343117437`*^9, 3.6704062646531043`*^9}}],
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -372,25 +610,32 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2338, 72, 209, "Input"],
-Cell[2899, 94, 264, 7, 31, "Input"],
-Cell[3166, 103, 493, 15, 31, "Input"],
-Cell[3662, 120, 543, 15, 75, "Input"],
-Cell[4208, 137, 810, 22, 75, "Input"],
-Cell[5021, 161, 549, 15, 92, "Input"],
-Cell[5573, 178, 641, 19, 92, "Input"],
-Cell[6217, 199, 128, 1, 30, "Text"],
+Cell[558, 20, 206, 4, 30, "Text"],
+Cell[767, 26, 1189, 36, 147, "Input"],
 Cell[CellGroupData[{
-Cell[6370, 204, 1174, 32, 172, "Input"],
-Cell[7547, 238, 578, 11, 39, "Message"]
+Cell[1981, 66, 4254, 117, 471, "Input"],
+Cell[6238, 185, 402, 6, 31, "Output"]
 }, Open  ]],
-Cell[8140, 252, 256, 7, 46, "Input"],
-Cell[8399, 261, 180, 2, 30, "Text"],
-Cell[8582, 265, 334, 10, 46, "Input"],
-Cell[8919, 277, 371, 11, 48, "Input"],
-Cell[9293, 290, 1002, 27, 162, "Input"],
-Cell[10298, 319, 254, 5, 49, "Text"],
-Cell[10555, 326, 1067, 30, 165, "Input"]
+Cell[6655, 194, 2221, 62, 309, "Input"],
+Cell[8879, 258, 2338, 72, 209, "Input"],
+Cell[11220, 332, 264, 7, 31, "Input"],
+Cell[11487, 341, 493, 15, 31, "Input"],
+Cell[11983, 358, 543, 15, 75, "Input"],
+Cell[12529, 375, 810, 22, 75, "Input"],
+Cell[13342, 399, 549, 15, 92, "Input"],
+Cell[13894, 416, 641, 19, 92, "Input"],
+Cell[14538, 437, 128, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[14691, 442, 1174, 32, 172, "Input"],
+Cell[15868, 476, 578, 11, 39, "Message"]
+}, Open  ]],
+Cell[16461, 490, 256, 7, 46, "Input"],
+Cell[16720, 499, 180, 2, 30, "Text"],
+Cell[16903, 503, 334, 10, 46, "Input"],
+Cell[17240, 515, 371, 11, 48, "Input"],
+Cell[17614, 528, 1002, 27, 162, "Input"],
+Cell[18619, 557, 254, 5, 49, "Text"],
+Cell[18876, 564, 1067, 30, 108, "Input"]
 }
 ]
 *)
