@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9231,        290]
-NotebookOptionsPosition[      8527,        264]
-NotebookOutlinePosition[      8874,        279]
-CellTagsIndexPosition[      8831,        276]
+NotebookDataLength[     12529,        389]
+NotebookOptionsPosition[     11626,        358]
+NotebookOutlinePosition[     11973,        373]
+CellTagsIndexPosition[     11930,        370]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -259,11 +259,105 @@ Cell[BoxData[
      RowBox[{"n", "-", "4"}]]}]}], ";"}]], "Input",
  CellChangeTimes->{{3.670386411227848*^9, 3.670386424617182*^9}}],
 
-Cell["The density is negative for n < 4 ?? ?", "Text",
- CellChangeTimes->{{3.6703864286997833`*^9, 3.6703864408702135`*^9}}]
+Cell["The mass ratio is negative for n < 4 ?? ?", "Text",
+ CellChangeTimes->{{3.6703864286997833`*^9, 3.6703864408702135`*^9}, {
+  3.6703866981375947`*^9, 3.6703866997571716`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqn\[LetterSpace]11", "=", 
+   RowBox[{
+    FractionBox["P1", "P2"], "\[Equal]", 
+    FractionBox[
+     RowBox[{"2", 
+      RowBox[{"(", 
+       RowBox[{"n", "-", "3"}], ")"}]}], 
+     RowBox[{"n", "-", "4"}]]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6703867046895876`*^9, 3.670386721763423*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqn\[LetterSpace]12", "=", 
+   RowBox[{
+    FractionBox["\[Rho]1", "\[Rho]2"], "\[Equal]", 
+    FractionBox["2", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"n", "-", "4"}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{"n", "-", "3"}], ")"}]}]]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.670386723390349*^9, 3.670386752789959*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  FractionBox["T1", "T2"], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"T1", "\[Rule]", " ", 
+    RowBox[{"P1", "/", "\[Rho]1"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{"T2", "\[Rule]", " ", 
+    RowBox[{"P2", "/", "\[Rho]2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{"eqn\[LetterSpace]11", ",", "P1"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"%", " ", "/.", " ", 
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{"eqn\[LetterSpace]12", ",", "\[Rho]1"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eqn\[LetterSpace]13", "=", 
+   RowBox[{
+    FractionBox["T1", "T2"], "\[Equal]", "%"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6703867585904675`*^9, 3.670386834604719*^9}}],
+
+Cell["\<\
+Equation 19 is tricky. Each fluid element in the luminous shell emits photons \
+in all directions, but thos that pass through the inner absorbing orb \
+disappear.\
+\>", "Text",
+ CellChangeTimes->{{3.670387765990219*^9, 3.6703878593875136`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  FractionBox[
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"2", "\[Pi]", " ", 
+      SuperscriptBox["r", "2"], 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "R2", ",", "R1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", 
+       RowBox[{"ArcSin", "[", 
+        FractionBox["R2", "r"], "]"}], ",", "\[Pi]"}], "}"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"R1", ">", "R2", ">", "0"}], "}"}]}]}], "]"}], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"4", "\[Pi]"}], "3"], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["R1", "3"], "-", 
+      SuperscriptBox["R2", "3"]}], ")"}]}]], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Simplify", "[", "%", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eqn\[LetterSpace]19", "=", 
+   RowBox[{"\[Phi]", "\[Equal]", "%"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.670388039631983*^9, 3.670388077565606*^9}, {
+  3.6703881411160774`*^9, 3.670388262527698*^9}}]
 },
-WindowSize->{759, 553},
-WindowMargins->{{Automatic, 252}, {24, Automatic}},
+WindowSize->{836, 553},
+WindowMargins->{{Automatic, 175}, {24, Automatic}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -291,7 +385,12 @@ Cell[6370, 204, 1174, 32, 172, "Input"],
 Cell[7547, 238, 578, 11, 39, "Message"]
 }, Open  ]],
 Cell[8140, 252, 256, 7, 46, "Input"],
-Cell[8399, 261, 124, 1, 30, "Text"]
+Cell[8399, 261, 180, 2, 30, "Text"],
+Cell[8582, 265, 334, 10, 46, "Input"],
+Cell[8919, 277, 371, 11, 48, "Input"],
+Cell[9293, 290, 1002, 27, 162, "Input"],
+Cell[10298, 319, 254, 5, 49, "Text"],
+Cell[10555, 326, 1067, 30, 165, "Input"]
 }
 ]
 *)
